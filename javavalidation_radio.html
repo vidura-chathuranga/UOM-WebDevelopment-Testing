@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <script>
+            function validation(form){
+
+                document.write(form[0]+"<br>");
+                document.write(form[1]+"<br>");
+                if(form[0].checked == false && form[1].checked == false){
+                    document.write("Please select gender female or male");
+                    return false;
+                }else{
+                    form.submit();
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="#" method="post">
+
+            <input type="radio" name="gender" value="Male">Male<br>
+            <input type="radio" name="gender" value="Female">Female<br>
+            <input type="submit" name="submit" value="Submit" onclick="validation(this.form)"><br>
+            <input type="reset" name="reset" value="Reset">
+        </form>
+    </body>
+</html>

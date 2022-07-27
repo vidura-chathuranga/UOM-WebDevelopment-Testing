@@ -1,0 +1,143 @@
+body{
+    background-image:url('gradientBackground.jpg');
+    margin:0;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul{
+    list-style-type: none;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 0px;
+    
+    
+}
+li{
+    display: inline;
+
+}
+li a{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+}
+.active{
+    background-color: pink;
+    padding: 10px;
+    
+}
+li a:hover{
+
+    background-color: black;
+}
+#firstheading{
+    background-image: url('backgroundPic.jpg');
+    padding:10px;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 160px;
+    height: 200px;
+    border: 8px solid black;
+    padding: 8px;
+    
+}
+#img:hover{
+    transform:scale(2,2);
+}
+#secondImage{
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    padding: 50px;
+    height:auto;
+    max-width: auto;
+    opacity:0.3;
+}
+#secondImage:hover{
+    transform:scale(2,2);
+    opacity:1;
+}
+video{
+    height:auto;
+    max-width:100%;
+}
+.Transform_animation{
+    height:100px;
+    width:100px;
+    padding:10px;
+    margin-top: 20px;
+    background-color: aqua;
+}
+.Transform_animation:hover{
+    Transform:scale(2,2);
+}
+.Transform_circle{
+    height:75px;
+    width:75px;
+    padding:10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: black;
+    border: 10px solid  red;
+    transition: width 2s, height 2s, transform 2s;
+}
+.Transform_circle:hover{
+    width:200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
+.Transform_square{
+    height:75px;
+    width:75px;
+    padding:10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgb(238, 246, 10);
+    border-radius: 100%;
+    transition: transform 2s;
+}
+.Transform_square:hover{
+    transform: translatex(200px);
+}
+/*psudo element styles*/
+h1::before{
+    content:'';
+    background-image:url('flowerpng.png');
+    display: inline-block;
+    width:30px;
+    height:25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1::after{
+    content:'';
+    background-image:url('flowerpng.png');
+    display: inline-block;
+    width:30px;
+    height:25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#firstpara::first-line{
+    text-decoration: underline;
+    color:white;
+}
+#firstpara::first-letter{
+    font-size: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 10px 5px 5px 0px;
+    float:left;
+    line-height: 15px;
+
+}

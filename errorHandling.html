@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <input type="text" id="para">
+        <br>
+        <input type="submit" onclick="handling()">
+
+        <p id="demo"></p>
+
+        <script>
+                function handling() {
+                    const message = document.getElementById("demo");
+                    message.innerHTML = "";
+
+                    let x = document.getElementById("para").value;
+                    
+                    try {
+                        if(x == "") throw "is empty";
+
+                        if(isNaN(x)) throw "is not a number";
+
+                        x = Number(x);
+
+                        if(x > 10) throw "is too high";
+
+                        if(x < 5) throw "is too low";
+
+                    }
+                    catch(err) {
+                        message.innerHTML = "Error: " + err + ".";
+                    }
+                    finally {
+                        document.getElementById("demo").value = "";
+                    }
+                }
+
+        </script>
+    </body>
+</html>
